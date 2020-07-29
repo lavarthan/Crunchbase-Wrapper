@@ -73,13 +73,13 @@ A company named json file containing the below data if available
 
 > **26. Brief description**
 
-> **27. Logo**
+> **27. Logo URL**
 
-> **28. Facebook**
+> **28. Facebook URL**
 
-> **29. Twitter**
+> **29. Twitter URL**
 
-> **30. LinkedIn**
+> **30. LinkedIn URL**
 
 ##### Note: You can see the sample output files [here][3]
 
