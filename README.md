@@ -19,6 +19,8 @@ This is used to extrat the company details from the  [Crunchbase][1]
 
 >> **Note:** *It will look the first five company results*
 
+#### NOTE: For a better results you need good internet connection
+
 ## Output
 A company named json file containing the below data if available
 > **1. Name**
@@ -81,7 +83,7 @@ A company named json file containing the below data if available
 
 > **30. LinkedIn URL**
 
-##### Note: You can see the sample output files [here][3]
+#### Note: You can see the sample output files [here][3]
 
 
 
