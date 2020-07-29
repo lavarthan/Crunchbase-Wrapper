@@ -101,6 +101,8 @@ while True:
         except:
             print("no brief description found")
             pass
+
+        
         try:
             result.update(get_image(soup))
         except:
