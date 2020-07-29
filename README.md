@@ -13,7 +13,7 @@ This is used to extrat the company details from the  [Crunchbase][1]
 ## How to use?
 > If you have the proper name for the company you can enter the name and get the details
 
->> **Note:** *Proper name mean for example if you want the [Netflix][2] company details Crunchbase url is https://www.crunchbase.com/organization/netflix here last part `netflix` is the proper name*
+>> **Note:** *Proper name mean for example if you want the [Netflix][2] company details, Crunchbase url is https://www.crunchbase.com/organization/netflix here last part `netflix` is the proper name*
 
 > If you want to search for a company just press enter and input website URL of the company and the search key word
 
@@ -81,7 +81,7 @@ A company named json file containing the below data if available
 
 > **30. LinkedIn**
 
-##### Note: You can see the sample [here][3]
+##### Note: You can see the sample output files [here][3]
 
 
 
