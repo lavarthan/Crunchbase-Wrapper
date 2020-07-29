@@ -135,8 +135,11 @@ def get_soup(query):
         action.reset_actions()
 
         # wait until page fully loaded
-        wait(d, 30).until(
-            EC.presence_of_element_located((By.XPATH, '//identifier-image[@class=\'ng-star-inserted\']//img')))
+        try:
+            wait(d, 40).until(
+                EC.presence_of_element_located((By.XPATH, '//identifier-image[@class=\'ng-star-inserted\']//img')))
+        except:
+            pass
         try:
             # press the load more button to get the full description
             wait(d, 7).until(EC.presence_of_element_located((By.XPATH, '//a[contains(text(),\'Read More\')]')))

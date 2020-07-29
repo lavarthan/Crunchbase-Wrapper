@@ -73,7 +73,7 @@ while True:
             result.update(get_about(soup))
         except:
             print('some thing went wrong!')
-            break
+            # break
 
         try:
             result.update(get_name(soup))
@@ -102,7 +102,7 @@ while True:
             print("no brief description found")
             pass
 
-        
+
         try:
             result.update(get_image(soup))
         except:
