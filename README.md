@@ -1,5 +1,5 @@
 # Crunchbase-Wrapper
-This is used to extrat the company details from the  [Crunchbase][1]
+This is used to extract the company details from the  [Crunchbase][1]
 
 ## How to install
 > STEP 1: Clone the repository
