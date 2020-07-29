@@ -113,5 +113,5 @@ while True:
             pass
 
     file_name = result['Name']
-    with open(file_name+'.json', 'w') as f:
+    with open('Company/'+file_name+'.json', 'w') as f:
         json.dump(result, f, indent=4, separators=(',', ': '))
