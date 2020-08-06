@@ -112,16 +112,23 @@ def get_soup(query):
     d.get('https://www.crunchbase.com/organization/' + query)
 
     try:
+        wait(d, 40).until(
+            EC.presence_of_element_located((By.XPATH, '//identifier-image[@class=\'ng-star-inserted\']//img')))
         # press the load more button to get the full description
-        wait(d, 5).until(EC.presence_of_element_located((By.XPATH, '//a[contains(text(),\'Read More\')]')))
-        btn = d.find_element_by_xpath('//a[contains(text(),\'Read More\')]')
-        btn.click()
+        wait(d, 10).until(EC.presence_of_element_located((By.XPATH, '//a[contains(text(),\'Read More\')]')))
+        btn = d.find_element_by_xpath('//a[contains(text(),\'Read More\')]').click()
+        # btn.click()
+        content = d.page_source
+        soup = BeautifulSoup(''.join(content), 'html.parser')
     except:
+        print("lets passes the captcha")
         pass
     sleep(5)
-
     content = d.page_source
     soup = BeautifulSoup(''.join(content), 'html.parser')
+
+    # content = d.page_source
+    # soup = BeautifulSoup(''.join(content), 'html.parser')
 
     # by pass the captcha if get blocked by clicking and holding the captcha button
     if soup.find('title').text == 'Access to this page has been denied.':
@@ -138,17 +145,25 @@ def get_soup(query):
         try:
             wait(d, 40).until(
                 EC.presence_of_element_located((By.XPATH, '//identifier-image[@class=\'ng-star-inserted\']//img')))
+            # wait(d, 20).until(EC.presence_of_element_located((By.XPATH, '//a[contains(text(),\'Read More\')]')))
+            btn = d.find_element_by_xpath('//a[contains(text(),\'Read More\')]').click()
+            # btn.click()
+            content = d.page_source
+            soup = BeautifulSoup(''.join(content), 'html.parser')
         except:
             pass
-        try:
-            # press the load more button to get the full description
-            wait(d, 7).until(EC.presence_of_element_located((By.XPATH, '//a[contains(text(),\'Read More\')]')))
-            btn = d.find_element_by_xpath('//a[contains(text(),\'Read More\')]')
-            btn.click()
-        except:
-            pass
-        content = d.page_source
-        soup = BeautifulSoup(''.join(content), 'html.parser')
+        # try:
+        #     # press the load more button to get the full description
+        #     wait(d, 20).until(EC.presence_of_element_located((By.XPATH, '//a[contains(text(),\'Read More\')]')))
+        #     btn = d.find_element_by_xpath('//a[contains(text(),\'Read More\')]').click()
+        #     # btn.click()
+        #     content = d.page_source
+        #     soup = BeautifulSoup(''.join(content), 'html.parser')
+        # except:
+        #     print('no read more')
+        #     pass
+        # content = d.page_source
+        # soup = BeautifulSoup(''.join(content), 'html.parser')
     d.quit()
     return soup
 
