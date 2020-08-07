@@ -3,7 +3,7 @@
     "Number of Employees": "10001+",
     "IPO Status": "Public",
     "Website": " www.dell.com ",
-    "CB Rank (Company)": "3,662",
+    "CB Rank (Company)": "4,200",
     "Name": "Dell",
     "short description": "Dell transforms computing and provides high quality solutions that empower people to do more all over the world.",
     "Stock Symbol": " NYSE:DELL ",
@@ -12,6 +12,7 @@
     "Number of Exits": "18",
     "Number of Current Team Members": "200",
     "Industries": "Consumer Electronics,Hardware",
+    "Headquarters Location": " Round Rock, Texas, United States",
     "Sub-Organization of": " Dell Technologies ",
     "Founded Date": "1984",
     "Founders": " Michael Dell",
@@ -24,5 +25,7 @@
     "Logo": "https://res-4.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/mstqfthk6aaw2wa1hxkg",
     "Facebook": "https://www.facebook.com/Dell",
     "LinkedIn": "https://www.linkedin.com/company/dell",
-    "Twitter": "http://twitter.com/Dell"
+    "Twitter": "http://twitter.com/Dell",
+    "Last funding date": "Jun 7, 2012",
+    "Transaction name": " Dell Innovators Credit Fund "
 }

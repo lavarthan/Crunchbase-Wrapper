@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e076ecb-36c4-4f13-b1b3-91e12697125a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/check.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company/ASUSTeK Computer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Company/ASUSTeK Computer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company/Acrochat.json" beforeDir="false" afterPath="$PROJECT_DIR$/Company/Acrochat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company/Apple.json" beforeDir="false" afterPath="$PROJECT_DIR$/Company/Apple.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company/Course Hero.json" beforeDir="false" afterPath="$PROJECT_DIR$/Company/Course Hero.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company/Coursera.json" beforeDir="false" afterPath="$PROJECT_DIR$/Company/Coursera.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company/Dell.json" beforeDir="false" afterPath="$PROJECT_DIR$/Company/Dell.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company/Dialog.json" beforeDir="false" afterPath="$PROJECT_DIR$/Company/Dialog.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company/Hello Alfred.json" beforeDir="false" afterPath="$PROJECT_DIR$/Company/Hello Alfred.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company/Netflix.json" beforeDir="false" afterPath="$PROJECT_DIR$/Company/Netflix.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ulits.py" beforeDir="false" afterPath="$PROJECT_DIR$/ulits.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,13 +32,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1fMitGuZhxXJbq8nqzMXLXrXadB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
@@ -37,13 +51,28 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
+    <configuration name="check" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Crunchbase Warpper" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/check.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Crunchbase Warpper" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -82,10 +111,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.check" />
+        <item itemvalue="Python.check" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.check" />
       </list>
     </recent_temporary>
   </component>

@@ -4,13 +4,14 @@
     "Last Funding Type": "Series C",
     "IPO Status": "Private",
     "Website": " www.crunchbase.com/ ",
-    "CB Rank (Company)": "12,824",
+    "CB Rank (Company)": "12,645",
     "Name": "Crunchbase",
     "short description": "Crunchbase provides a platform for finding business information about private and public companies.",
     "Total Funding Amount": "$56.5M",
-    "Number of Current Team Members": "92",
+    "Number of Current Team Members": "93",
     "Number of Investors": "10",
     "Industries": "Analytics,Big Data,Business Intelligence,Communities,Venture Capital",
+    "Headquarters Location": " San Francisco, California, United States",
     "Founded Date": "Jul 2007",
     "Founders": " Michael Arrington",
     "Operating Status": "Active",
@@ -23,5 +24,7 @@
     "Logo": "https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/q8xrloq709y1ywefmkme",
     "Facebook": "https://www.facebook.com/crunchbase/",
     "LinkedIn": "http://www.linkedin.com/company/crunchbase/",
-    "Twitter": "https://twitter.com/crunchbase"
+    "Twitter": "https://twitter.com/crunchbase",
+    "Last funding date": "Oct 31, 2019",
+    "Transaction name": " Series C , Series B , Series A , Series A "
 }

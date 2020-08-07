@@ -4,15 +4,15 @@
     "Last Funding Type": "Post-IPO Debt",
     "IPO Status": "Public",
     "Website": " www.apple.com ",
-    "CB Rank (Company)": "23",
+    "CB Rank (Company)": "22",
     "Name": "Apple",
     "short description": "Apple is a multinational corporation that designs, manufactures, and markets consumer electronics, personal computers, and software.",
     "Stock Symbol": " NASDAQ:AAPL ",
-    "Number of Acquisitions": "116",
+    "Number of Acquisitions": "117",
     "Number of Investments": "15",
     "Number of Exits": "8",
     "Total Funding Amount": "$6.2B",
-    "Number of Current Team Members": "290",
+    "Number of Current Team Members": "291",
     "Industries": "Consumer Electronics,Electronics,Hardware,Mobile Devices,Retail,Software",
     "Founded Date": "Apr 1, 1976",
     "Founders": " Ron Wayne, Steve Jobs, Steve Wozniak",
@@ -26,5 +26,7 @@
     "Logo": "https://res-2.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/v1411584838/z5utpyzqil1rznbizd65.png",
     "Facebook": "https://www.facebook.com/apple/",
     "LinkedIn": "http://www.linkedin.com/company/apple",
-    "Twitter": "https://twitter.com/AppleSupport"
+    "Twitter": "https://www.twitter.com/AppleSupport",
+    "Last funding date": "Sep 6, 2017",
+    "Transaction name": "IPO Debt , Venture Round ,IPO Equity ,IPO Equity , Seed Round "
 }

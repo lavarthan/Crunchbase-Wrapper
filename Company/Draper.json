@@ -3,12 +3,13 @@
     "Number of Employees": "5001-10000",
     "IPO Status": "Private",
     "Website": " draper.com/ ",
-    "CB Rank (Company)": "84,293",
+    "CB Rank (Company)": "68,906",
     "Name": "Draper",
     "short description": "Draper is a non-profit laboratory focused on applied research, engineering development, education, and technology transfer.",
     "Number of Investments": "1",
     "Number of Current Team Members": "13",
     "Industries": "Innovation Management,Medical,National Security,Non Profit",
+    "Headquarters Location": " Cambridge, Massachusetts, United States",
     "Founded Date": "1938",
     "Operating Status": "Active",
     "Company Type": "Non-profit",
@@ -17,5 +18,7 @@
     "Logo": "https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/v1444910486/mmx8n25lerdxxuw2qnne.png",
     "Facebook": "https://www.facebook.com/DraperLaboratory",
     "LinkedIn": "https://www.linkedin.com/company/draper-laboratory",
-    "Twitter": "https://twitter.com/draperlab"
+    "Twitter": "https://twitter.com/draperlab",
+    "Last funding date": "Feb 21, 2018",
+    "Transaction name": " Dover Microsystems "
 }

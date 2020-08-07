@@ -77,6 +77,95 @@ def get_suggestion(query):
         d.quit()
 
 
+# def get_soup(query):
+#     """
+#     :param query: organization name
+#     :return: soup for the company name
+#
+#     """
+#     options = Options()
+#     options.add_argument("start-maximized")
+#     options.add_argument("disable-infobars")
+#     options.add_argument("--disable-extensions")
+#
+#     # if you don't want to open the browser uncomment the below line
+#     # options.headless = True
+#
+#     # adding user agent to prevent blocked permanently
+#     UserAgents = [
+#         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 "
+#         "Safari/537.36",
+#         'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:23.0) Gecko/20100101 Firefox/23.0',
+#         'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.62 Safari/537.36',
+#         'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)',
+#         'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.146 Safari/537.36',
+#         'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.146 Safari/537.36',
+#         'Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20140205 Firefox/24.0 Iceweasel/24.3.0',
+#         'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0',
+#         'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:28.0) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 '
+#         'Safari/534.57.2',
+#         "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/16D57"]
+#     user_agent = UserAgents[random.randint(0, 8)]
+#     options.add_argument("--user-agent=%s" % user_agent)
+#
+#     d = webdriver.Chrome(options=options, executable_path='chromedriver')
+#     d.get('https://www.crunchbase.com/organization/' + query)
+#
+#     try:
+#         wait(d, 40).until(
+#             EC.presence_of_element_located((By.XPATH, '//identifier-image[@class=\'ng-star-inserted\']//img')))
+#         # press the load more button to get the full description
+#         wait(d, 10).until(EC.presence_of_element_located((By.XPATH, '//a[contains(text(),\'Read More\')]')))
+#         btn = d.find_element_by_xpath('//a[contains(text(),\'Read More\')]').click()
+#         # btn.click()
+#         content = d.page_source
+#         soup = BeautifulSoup(''.join(content), 'html.parser')
+#     except:
+#         print("lets passes the captcha")
+#         pass
+#     sleep(5)
+#     content = d.page_source
+#     soup = BeautifulSoup(''.join(content), 'html.parser')
+#
+#     # content = d.page_source
+#     # soup = BeautifulSoup(''.join(content), 'html.parser')
+#
+#     # by pass the captcha if get blocked by clicking and holding the captcha button
+#     if soup.find('title').text == 'Access to this page has been denied.':
+#         action = ActionChains(d)
+#         element = d.find_element_by_id('px-captcha').location
+#         x = element['x']
+#         y = element['y']
+#         action.move_by_offset(x, y)
+#         action.click_and_hold().perform()
+#         sleep(4)
+#         action.reset_actions()
+#
+#         # wait until page fully loaded
+#         try:
+#             wait(d, 40).until(
+#                 EC.presence_of_element_located((By.XPATH, '//identifier-image[@class=\'ng-star-inserted\']//img')))
+#             # wait(d, 20).until(EC.presence_of_element_located((By.XPATH, '//a[contains(text(),\'Read More\')]')))
+#             btn = d.find_element_by_xpath('//a[contains(text(),\'Read More\')]').click()
+#             # btn.click()
+#             content = d.page_source
+#             soup = BeautifulSoup(''.join(content), 'html.parser')
+#         except:
+#             pass
+#         # try:
+#         #     # press the load more button to get the full description
+#         #     wait(d, 20).until(EC.presence_of_element_located((By.XPATH, '//a[contains(text(),\'Read More\')]')))
+#         #     btn = d.find_element_by_xpath('//a[contains(text(),\'Read More\')]').click()
+#         #     # btn.click()
+#         #     content = d.page_source
+#         #     soup = BeautifulSoup(''.join(content), 'html.parser')
+#         # except:
+#         #     print('no read more')
+#         #     pass
+#         # content = d.page_source
+#         # soup = BeautifulSoup(''.join(content), 'html.parser')
+#     d.quit()
+#     return soup
 def get_soup(query):
     """
     :param query: organization name
@@ -110,62 +199,68 @@ def get_soup(query):
 
     d = webdriver.Chrome(options=options, executable_path='chromedriver')
     d.get('https://www.crunchbase.com/organization/' + query)
+    sleep(5)
 
+    temp_content = d.page_source
+    temp_soup = BeautifulSoup(''.join(temp_content), 'html.parser')
+    try:
+        if temp_soup.find('title').text == 'Access to this page has been denied.':
+            action = ActionChains(d)
+            element = d.find_element_by_id('px-captcha').location
+            x = element['x']
+            y = element['y']
+            action.move_by_offset(x, y)
+            action.click_and_hold().perform()
+            sleep(4)
+            action.reset_actions()
+    except:
+        pass
     try:
         wait(d, 40).until(
             EC.presence_of_element_located((By.XPATH, '//identifier-image[@class=\'ng-star-inserted\']//img')))
-        # press the load more button to get the full description
-        wait(d, 10).until(EC.presence_of_element_located((By.XPATH, '//a[contains(text(),\'Read More\')]')))
-        btn = d.find_element_by_xpath('//a[contains(text(),\'Read More\')]').click()
-        # btn.click()
-        content = d.page_source
-        soup = BeautifulSoup(''.join(content), 'html.parser')
     except:
-        print("lets passes the captcha")
         pass
-    sleep(5)
-    content = d.page_source
-    soup = BeautifulSoup(''.join(content), 'html.parser')
 
-    # content = d.page_source
-    # soup = BeautifulSoup(''.join(content), 'html.parser')
+    # press the load more button to get the full description
+    try:
+        wait(d, 5).until(EC.presence_of_element_located((By.XPATH, '//a[contains(text(),\'Read More\')]')))
+    except:
+        pass
+    try:
+        d.find_element_by_xpath('//a[contains(text(),\'Read More\')]').click()
 
-    # by pass the captcha if get blocked by clicking and holding the captcha button
-    if soup.find('title').text == 'Access to this page has been denied.':
-        action = ActionChains(d)
-        element = d.find_element_by_id('px-captcha').location
-        x = element['x']
-        y = element['y']
-        action.move_by_offset(x, y)
-        action.click_and_hold().perform()
-        sleep(4)
-        action.reset_actions()
+    except:
+        pass
+    content1 = d.page_source
+    soup1 = BeautifulSoup(''.join(content1), 'html.parser')
 
-        # wait until page fully loaded
+    # d = webdriver.Chrome(options=options, executable_path='chromedriver')
+    try:
+
+        d.get('https://www.crunchbase.com/organization/' + query + '/company_financials')
+        sleep(5)
+        temp_content = d.page_source
+        temp_soup = BeautifulSoup(''.join(temp_content), 'html.parser')
         try:
-            wait(d, 40).until(
-                EC.presence_of_element_located((By.XPATH, '//identifier-image[@class=\'ng-star-inserted\']//img')))
-            # wait(d, 20).until(EC.presence_of_element_located((By.XPATH, '//a[contains(text(),\'Read More\')]')))
-            btn = d.find_element_by_xpath('//a[contains(text(),\'Read More\')]').click()
-            # btn.click()
-            content = d.page_source
-            soup = BeautifulSoup(''.join(content), 'html.parser')
+            if temp_soup.find('title').text == 'Access to this page has been denied.':
+                action = ActionChains(d)
+                element = d.find_element_by_id('px-captcha').location
+                x = element['x']
+                y = element['y']
+                action.move_by_offset(x, y)
+                action.click_and_hold().perform()
+                sleep(4)
+                action.reset_actions()
         except:
             pass
-        # try:
-        #     # press the load more button to get the full description
-        #     wait(d, 20).until(EC.presence_of_element_located((By.XPATH, '//a[contains(text(),\'Read More\')]')))
-        #     btn = d.find_element_by_xpath('//a[contains(text(),\'Read More\')]').click()
-        #     # btn.click()
-        #     content = d.page_source
-        #     soup = BeautifulSoup(''.join(content), 'html.parser')
-        # except:
-        #     print('no read more')
-        #     pass
-        # content = d.page_source
-        # soup = BeautifulSoup(''.join(content), 'html.parser')
+
+        content2 = d.page_source
+        soup2 = BeautifulSoup(''.join(content2), 'html.parser')
+    except:
+        soup2 = 'None'
     d.quit()
-    return soup
+
+    return soup1, soup2
 
 
 def get_brief_description(soup):
@@ -175,7 +270,7 @@ def get_brief_description(soup):
 
     """
     p_tag = soup.find_all('description-card')[1].find_all('p')
-    return {'Brief_description': ' '.join([i.text for i in p_tag])}
+    return {'Brief_description': re.sub(u"(\u2018|\u2019|\n|\u2014|\u2015)", "'", ' '.join([i.text for i in p_tag]))}
 
 
 def get_image(soup):
@@ -185,6 +280,23 @@ def get_image(soup):
 
     """
     return {'Logo': soup.find('img', attrs={'style': 'opacity: 1;'})['src']}
+
+
+def get_financial_details(soup):
+    dates = []
+    transaction_name = []
+    list_card = soup.find('list-card')
+    td = list_card.find_all('td')
+    all = [i.text for i in td]
+    row = len(list_card.find_all('tr'))-1
+    j = 0
+    for i in range(row):
+        dates.append(all[j])
+        transaction_name.append(all[j+1].split('-')[0])
+        j+=5
+    return {'Last funding date': dates[0],
+            'Transaction name': ','.join(transaction_name)
+            }
 
 
 def get_website(soup):
