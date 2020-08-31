@@ -205,6 +205,7 @@ def get_soup(query):
     temp_soup = BeautifulSoup(''.join(temp_content), 'html.parser')
     try:
         if temp_soup.find('title').text == 'Access to this page has been denied.':
+            wait(d, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body')))
             action = ActionChains(d)
             element = d.find_element_by_id('px-captcha').location
             x = element['x']
