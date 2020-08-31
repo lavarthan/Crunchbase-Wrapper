@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e076ecb-36c4-4f13-b1b3-91e12697125a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Company/Please verify you are a human.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company/Stack Overflow.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Company/eutopia.json" beforeDir="false" afterPath="$PROJECT_DIR$/Company/eutopia.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ulits.py" beforeDir="false" afterPath="$PROJECT_DIR$/ulits.py" afterDir="false" />
